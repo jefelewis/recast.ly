@@ -1,11 +1,9 @@
-var VideoList = () => (
+var VideoList = (props) => (
+  
   <div className="video-list">
-    <div><h5><em>videoListEntry</em> view goes here</h5></div>
-    <div><h5><em>videoListEntry</em> view goes here</h5></div>
-    <div><h5><em>videoListEntry</em> view goes here</h5></div>
-    <div><h5><em>videoListEntry</em> view goes here</h5></div>
-    <div><h5><em>videoListEntry</em> view goes here</h5></div>
+    <VideoListEntry video = {this.props.VideoListEntry[0]}/>
   </div>
+
 );
 
 // PropTypes tell other developers what `props` a component expects
