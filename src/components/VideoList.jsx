@@ -1,14 +1,10 @@
 var VideoList = (props) => {
-
+  const listItem = props.videos.map(function(video, index) {
+    return (<VideoListEntry key = {index} video = {video}/>);
+  });
+  console.log(listItem);
   return (
-  ///map over 
-    <div className="video-list">
-    {let videoArr = this.props.video;
-        for (video of videoArr){
-        <VideoListEntry videos = {video}/>
-      }}
-
-    </div>
+    <div className="video-list">{listItem}</div>
   );
 };
 
