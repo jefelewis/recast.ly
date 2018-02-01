@@ -14,7 +14,10 @@ class App extends React.Component {
       currentVideo : video
     });
   }
-
+  
+  handleSearch () {
+    
+  }
 
   render() {
     return (
