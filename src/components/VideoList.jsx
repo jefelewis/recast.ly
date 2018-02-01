@@ -1,12 +1,13 @@
 var VideoList = (props) => {
+
   return (
   ///map over 
     <div className="video-list">
-      <VideoListEntry videos={exampleVideoData[0]}/>
-      <VideoListEntry videos={exampleVideoData[1]}/>
-      <VideoListEntry videos={exampleVideoData[2]}/>
-      <VideoListEntry videos={exampleVideoData[3]}/>
-      <VideoListEntry videos={exampleVideoData[4]}/>
+    {let videoArr = this.props.video;
+        for (video of videoArr){
+        <VideoListEntry videos = {video}/>
+      }}
+
     </div>
   );
 };
@@ -21,7 +22,7 @@ VideoList.propTypes = {
 // `var` declarations will only exist globally where explicitly defined.
 window.VideoList = VideoList;
 
+// props = {
+//   videos: exampleVideoData = [{}, {}, {}]
 
-props = {
-  videos: window,
-};
+// }
