@@ -1,5 +1,5 @@
 var VideoList = (props) => {
-  const listItem = props.videos.map(function(video, index) {
+  const listItem = props.videos.map((video, index) => {
     return (<VideoListEntry key = {index} video = {video}/>);
   });
   console.log(listItem);
