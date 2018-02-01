@@ -9,8 +9,8 @@ var searchYouTube = (options, callback) => {
       part: 'snippet',
     },
     success: function(data) {
-      alert(data.items[0].title);
-      console.log(data.snippet);            
+      console.log(data.items); 
+      callback(data.items);       
     },
     error: function(jqXHR, textStatus, errorThrown) {
       alert (textStatus, + ' | ' + errorThrown);

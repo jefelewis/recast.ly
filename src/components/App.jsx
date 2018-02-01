@@ -11,12 +11,12 @@ class App extends React.Component {
 
   handleClick (video) {
     this.setState({
-      currentVideo : video
+      currentVideo: video
     });
   }
   
-  handleSearch () {
-    
+  handleSearch (data) {
+    this.setState({videoList: data});
   }
 
   render() {
@@ -24,7 +24,7 @@ class App extends React.Component {
       <div>
         <nav className="navbar">
           <div className="col-md-6 offset-md-3">
-            <Search />
+            <Search newSearch={this.handleSearch.bind(this)}/>
           </div>
         </nav>
         <div className="row">
