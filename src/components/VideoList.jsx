@@ -1,8 +1,9 @@
 var VideoList = (props) => {
+  
   const listItem = props.videos.map((video, index) => {
-    return (<VideoListEntry key = {index} video = {video}/>);
+    return (<VideoListEntry key = {index} video = {video}  clickHandler={props.clickHandler}/>);
   });
-  console.log(listItem);
+
   return (
     <div className="video-list">{listItem}</div>
   );
